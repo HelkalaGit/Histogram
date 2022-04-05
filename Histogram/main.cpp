@@ -1,14 +1,14 @@
-//
-//  main.cpp
-//  Histogram
-//
-//  Created by Joel Helkala on 5.4.2022.
+// Histo.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
+#include "Histogram.h"
+#include "Log.h"
+#include <memory>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+
+int main()
+{
+	std::unique_ptr<Logger> logger = std::make_unique<Logger>();
+	Hist::Histogram histogram(logger);
 }
